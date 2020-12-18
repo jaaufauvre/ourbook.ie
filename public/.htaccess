@@ -1,0 +1,4 @@
+# https://support.infinityfree.net/https/how-to-force-all-traffic-to-https/
+RewriteEngine On
+RewriteCond %{HTTP:X-Forwarded-Proto} =http
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
